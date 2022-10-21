@@ -2,17 +2,15 @@ name: CI to Docker Hub
 
 on:
   push:
-   tags:
-      - "v*.*.*"
-    
-jobs:
+    tags:
+      - 'v*.*.*'
 
+jobs:
   build:
     runs-on: ubuntu-latest
-    
-    steps:
 
-      - name: Check Out Repo 
+    steps:
+      - name: Check Out Repo
         uses: actions/checkout@v2
 
       - name: Login to Docker Hub
